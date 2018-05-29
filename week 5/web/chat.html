@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+                .boja {
+                        background-color: aqua;
+                }
+
+                .boja2 {
+                        background-color: rgb(153, 165, 42);
+                }
+
+                div {
+                        height: 200px;
+                        width: 150px;
+                        border: 0.5px solid rgb(172, 172, 172);
+                        overflow: scroll;
+                        background-color: rgb(233, 235, 235);
+                }
+
+                button {
+                        background-color: rgb(87, 87, 184);
+                        border-radius: 10px;
+                        color: white;
+                }
+
+                p {
+                        padding: 3px;
+                        background-color: rgb(33, 46, 233);
+                        color: white;
+                        border-radius: 5px;
+                        text-align: center;
+
+                }
+        </style>
+</head>
+
+<body>
+
+        <div id="ovde"></div>
+        <br>
+        <input type="text" id="text">
+        <button onclick="klik()">Send</button>
+
+
+        <script>
+                var poruka = document.querySelector('#text');
+
+                function klik(event) {
+                        var pItem = document.createElement('p');
+                        var text = document.createTextNode(poruka.value);
+                        pItem.appendChild(text);
+                        var div = document.querySelector('#ovde');
+                        div.appendChild(pItem);
+                        poruka.value = '';
+                        poruka.focus();
+                }
+
+                poruka.addEventListener('keyup', function () {
+                        if (event.keyCode == 13) {
+                                klik();
+                        }
+                })
+        </script>
+
+</body>
+
+</html>
+<!-- MOZE I OVAKO(radio kod kuce) -->
+<!-- <div></div>
+    <input type="text" name="c" id="c">
+    <button>send</button>
+
+    <script>
+        var text = document.querySelector("input");
+        var button = document.querySelector('button');
+        var div = document.querySelector('div')
+
+        button.onclick = function () {
+            var p = document.createElement('p');
+            var poruka = document.createTextNode(text.value);
+            p.appendChild(poruka);
+            div.appendChild(p)
+            text.value = '';
+            text.focus();
+        }
+        text.onkeyup = function () {
+            if (event.keyCode == 13) {
+                button.onclick();
+            }
+        } -->

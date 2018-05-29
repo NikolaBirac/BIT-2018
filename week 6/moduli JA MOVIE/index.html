@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+</head>
+
+<body>
+
+
+        <section>
+                <fieldset>
+                        <legend>Movie</legend>
+                        <label for="title">Title</label>
+                        <br>
+                        <input type="text" name="title" id="title" required>
+                        <br>
+
+                        <label for="length">Length(min)</label>
+                        <br>
+                        <input type="length" name="length" id="length">
+                        <br>
+
+                        <select name="genre" id="genre">
+                                <option value="drama">Drama</option>
+                                <option value="action">Action</option>
+                                <option value="comedy">Comedy</option>
+                                <option value="horror">Horror</option>
+                        </select>
+                        <br>
+                        <input type="button" value="Create Movie" id='add-button'>
+
+                        <div id='current-array'> </div>
+                        <span id='error'></span>
+                        <br>
+                </fieldset>
+
+                <fieldset>
+                        <legend>Program</legend>
+
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date">
+                        <input type="button" value="Create Program" id='add-button2'>
+                        <div id='current-array2'> </div>
+
+                        <hr>
+                        <select name="moviee" id="moviee"></select>
+                        <br>
+                        <br>
+                        <select name="dropPro" id="dropPro"></select>
+
+                        <div id='current-array3'> </div>
+                        <input type="button" value="add movie" id='add-button3'>
+
+
+                </fieldset>
+
+        </section>
+
+
+        <script type="text/javascript" src="UIModule.js"></script>
+        <script type="text/javascript" src="dataModule.js"></script>
+        <script type="text/javascript" src="mainModule.js"></script>
+</body>
+
+</html>

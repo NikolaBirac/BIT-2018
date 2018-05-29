@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <img src="" alt="">
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+        var niz = ['https://www.slikomania.rs/fotky6509/fotos/slike-na-platnu_XOBZV007E11-gal.jpg', 'http://cdn1.shopmania.biz/files/s4/773291108/p/l/8/slike-na-platnu-vuk-apstraktno-nina085-k~4618.jpg', 'http://vitassasa.mojsajt.rs/uploads/12109/images/slike-za-desktop-49.jpg?r=16x9&w=1280', 'https://pbs.twimg.com/profile_images/757551595961851904/TwnHW2_a_400x400.jpg'];
+
+        $(niz).each(function (index, element) {
+            var img = $('<img>');
+            $(img).attr('src', this);
+            var random = ((500 - 100) * Math.random() + 100);
+            $(img).css('width', random + 'px');
+            $('body').append(img);
+
+        });
+
+        $(document).ready(function () {
+            $('body').prepend('<h1>Gallery</h1>');
+
+
+        });
+        $('img').each(function (index, element) {
+            if ($(this).width() > 350) {
+                // $(this).css('border', '10px solid green');
+                $(this).css('box-shadow', '5px 5px 5px black');
+                return false;
+            }
+        })
+
+    </script>
+
+
+</body>
+
+</html>

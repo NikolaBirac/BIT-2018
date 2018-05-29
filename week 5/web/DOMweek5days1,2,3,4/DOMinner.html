@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+
+<body>
+        <div></div>
+        <div></div>
+
+        <script>
+                //PREKO DOM-a
+                var prvi = document.querySelector('div');
+
+                function drop(x, y) {
+
+                        var select = document.createElement('select');
+                        y.appendChild(select);
+
+                        for (var i = 0; i < x.length; i++) {
+                                var option1 = document.createElement('option');
+                                var text1 = document.createTextNode(x[i]);
+                                option1.appendChild(text1);
+                                select.appendChild(option1);
+                        }
+
+                }
+                drop(['rock', 'hip-hop', 'rnb'], prvi)
+
+
+
+                // INNERHTML
+
+                function add(x, div) {
+                        var s = '<select>'
+                        for (var i = 0; i < x.length; i++) {
+                                s = s + "<option>";
+                                s = s + x[i]
+                                s = s + "</option>"
+                        }
+                        s += '</select>'
+                        div1.innerHTML = s;
+                }
+
+                var div1 = document.querySelector('div:last-of-type');
+                add(['rock', 'hip-hop', 'rnb'], div1);
+
+                //preko innerHTML: (moj nacin)
+                // function drop(x) {
+                //         document.querySelector('div').innerHTML = '<select></select>';
+                //         for (var i = 0; i < x.length; i++) {
+                //                 document.querySelector('select').innerHTML = document.querySelector('select').innerHTML + '<option></option>';
+                //                 document.querySelector('option:last-of-type').innerHTML = x[i];
+                //         }
+                // }
+                // drop(['rock', 'hip-hop', 'rnb'])
+
+
+
+        </script>
+</body>
+
+</html>

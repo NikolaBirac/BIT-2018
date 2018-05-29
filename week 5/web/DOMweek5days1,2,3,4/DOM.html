@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .first {
+            background-color: yellow;
+        }
+
+        .second {
+            background-color: red;
+
+        }
+
+        .second1 {
+            background-color: green;
+        }
+
+        .third1 {
+            background-color: violet;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="first">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Watermelon</li>
+
+    </ul>
+    <ul class="second">
+        <li>Potato</li>
+        <li>Tomato</li>
+        <li>Onion</li>
+    </ul>
+
+
+    <ul class="third">
+        <li>Lime</li>
+        <li>Lemon</li>
+        <li>Mango</li>
+
+    </ul>
+
+
+    <script>
+        (function first() {
+
+
+            document.querySelector('.second > li:nth-of-type(2)').className = 'second1';
+        })();
+
+        (function second() {
+
+            document.querySelectorAll('.third li').className = 'first';
+        })
+
+
+        var a = document.querySelectorAll(".third li");
+        for (var i = 0; i < a.length; i++) {
+            a[i].className = 'third1'
+        }
+
+
+    </script>
+</body>
+
+</html>

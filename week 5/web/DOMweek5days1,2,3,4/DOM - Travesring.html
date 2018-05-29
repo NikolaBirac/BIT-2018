@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .active {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Watermelon</li>
+
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Potato</li>
+            <li class='active'>Tomato</li>
+            <li>Onion</li>
+        </ul>
+
+    </div>
+
+
+
+    <script>
+
+
+
+
+        (function selectLi() {
+            var a = document.querySelector('.active');
+            document.querySelector('.active').className = '';
+
+            a.parentNode.parentNode.previousElementSibling.firstElementChild.firstElementChild.className = 'active';
+
+        })();
+
+
+
+    </script>
+</body>
+
+</html>

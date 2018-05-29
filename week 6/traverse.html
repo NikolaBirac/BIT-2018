@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./animate.css">
+    <style>
+        .selected {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <img src="https://www.slikomania.rs/fotky6509/fotos/slike-na-platnu_XOBZV007E11-gal.jpg" alt="1">
+        <img src="http://cdn1.shopmania.biz/files/s4/773291108/p/l/8/slike-na-platnu-vuk-apstraktno-nina085-k~4618.jpg" alt="2">
+        <img src="http://vitassasa.mojsajt.rs/uploads/12109/images/slike-za-desktop-49.jpg?r=16x9w=1280" alt="3">
+    </div>
+
+    <div>
+        <img src="https://pbs.twimg.com/profile_images/757551595961851904/TwnHW2_a_400x400.jpg" alt="das">
+        <img src="https://www.slikomania.rs/fotky6509/fotos/slike-na-platnu_XOBZV007E11-gal.jpg" alt="152">
+        <img src="http://vitassasa.mojsajt.rs/uploads/12109/images/slike-za-desktop-49.jpg?r=16x9w=1280" alt="55">
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        $('img').css('width', '33%');
+        $('img:first').addClass('selected');
+        $('img').each(function (index, element) {
+            if ($(this).attr('class', 'selected')) {
+                $(this).removeClass('selected').closest('div').next().find('img:nth-of-type(2)').addClass('selected');
+                return false;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

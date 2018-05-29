@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+                .boja {
+                        border: 1px solid red;
+                        background-color: blueviolet;
+                }
+        </style>
+</head>
+
+<body>
+
+
+        <form action="get">
+                <label for="name">Name:</label>
+                <input type="text" name='name' id='name'>
+                <br>
+                <br>
+
+                <label for="surname">Surname:</label>
+                <input type="text" name='surname' id='surname'>
+                <br>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="text" name='email' id='email' required>
+                <br>
+                <br>
+
+                <label for="password">Password:</label>
+                <input type="password" name='password' id='password' required>
+
+
+                <br>
+                <br>
+
+                <!-- <button onclick="Attributes()">Provrera</button> -->
+                <input type="submit" onclick="Attributes()">
+        </form>
+
+
+
+        <script>
+                function Attributes(a) {
+                        var b = document.querySelectorAll("input");
+                        for (var i = 0; i < b.length; i++) {
+                                if (b[i].hasAttribute('required') && b[i].value == "") {
+                                        b[i].setAttribute('class', 'boja');
+                                }
+                        }
+                }
+
+        </script>
+
+</body>
+
+</html>

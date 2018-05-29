@@ -1,0 +1,382 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    width: 100%;
+}
+
+.pozadina {
+    width: 100%;
+    background-image: url(./images/banner3.jpg);
+    background-size: cover;
+    height: auto;
+}
+
+.naslov {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    color: white;
+    font-weight: 300;    
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-bottom: 7%;
+    letter-spacing: 4px;
+    padding: 3%;
+    font-size: 220%;
+    font-weight: 400;    
+}
+
+.button {
+    font-size: 110%;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgb(43, 103, 172);
+    padding: 13px 35px;
+    border-radius: 200px;
+    background-color: rgb(43, 103, 172);
+    letter-spacing: 2px;
+}
+
+span {
+    color: orange;
+    border: 4px solid rgb(104, 100, 100);
+    border-right: none;
+    padding: 1px 8px;
+    letter-spacing: 2px;
+}
+
+.build-estate {
+    margin-top: 6%;
+    text-align: center;
+    font-size: 200%;
+    color: rgb(104, 100, 100);
+}
+
+nav {
+    width: 95%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.navigacija {
+    width: 100%;
+    background-color: rgb(117, 185, 248);
+    color: white;
+}
+
+.navigacija li {
+    margin: 0;
+    list-style: none;
+    padding: 2.5%;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 105%;
+    letter-spacing: 2px;
+}
+
+/* ----------------WHO WE ARE-----------------*/
+
+article {
+    width: 85%;
+    margin-right: 0px;
+    margin: 0px auto;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 250%;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    
+}
+
+h2::after {
+    margin: 0 auto;
+    margin-top: 15px;
+    display: block;
+    width: 100px;
+    height: 2px;
+    content: ' ';
+    background-color: black;
+}
+
+h3 {
+    
+    color: rgb(117, 185, 248);
+    font-size: 180%;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    
+}
+
+.quot {
+    font-size: 110%;
+    word-spacing: 1px;
+    line-height: 170%;
+    margin-bottom: 30px;
+    font-weight: 400;    
+}
+
+.strelice li {
+    list-style: none;
+    padding: 3%;
+    padding-left: 0;
+    font-weight: 400;    
+    font-size: 110%;
+    color: gray;  
+    letter-spacing: 1px;
+}
+
+.icon {
+    color: rgb(255, 174, 0);
+    margin-right: 20px;
+}
+
+.building-image {
+    width: 100%;
+    margin-top: 50px;
+}
+
+/*-------------------WHAT PEOPLE SAYS---------------------------*/
+
+.customers {
+    background-color: rgb(131, 193, 243);
+    padding: 6% 3%;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.customers img {
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    /* margin-right: 20px; */
+}
+
+.customers h4{
+    display: inline-block;
+    margin-left: 100px;
+    margin-bottom: 6px;
+    font-size: 120%;
+}
+
+.customers i {
+    font-size: 150%;
+    color: white;
+}
+
+.customers i:first-of-type {
+    margin-left: 100px;
+}
+
+.customers p {
+    margin-top: 35px;
+    line-height: 170%;
+    color: white;
+    font-weight: 400;
+    font-size: 113%;
+}
+
+.articalAdress {
+    width: 100%;
+}
+
+address div {
+    color: white;
+    padding: 45px;
+    text-align: center;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+address div:first-of-type {
+    background-color: rgb(85, 211, 148);
+}
+
+h5 {
+    padding-bottom: 20px;
+    font-size: 145%;
+}
+
+address div p {
+    padding: 6px;
+}
+
+address div p i {
+    font-size: 160%;
+}
+
+address div p i:last-of-type {
+    margin-bottom: -3px;
+}
+
+address div:nth-of-type(2) {
+    background-color: rgb(248, 79, 116);
+}
+
+.social {
+    margin-right: 30px;
+    font-size: 160%;
+    padding: 10px;
+}
+
+.social:last-of-type {
+    margin-right: 0px;
+}
+
+#h5 {
+    margin-bottom: 30px;
+}
+
+address div:nth-of-type(3) {
+    background-color: rgb(31, 107, 248);
+}
+
+.house {
+    background-color: rgb(121, 161, 236);
+    padding: 10px;
+}
+
+address div:last-child {
+    padding: 0;
+}
+
+iframe {
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.submit {
+    background-color: rgb(255, 145, 0);
+    color: white;
+    font-size: 110%;
+    border-radius: 200px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/************************FOOTER**************/
+
+footer {
+    background-color: rgb(31, 30, 30);
+    color: white;
+    font-weight: 400;
+    padding: 13% 2%;
+    text-align: center;
+}
+
+footer ul {
+    margin-bottom: 30px;
+}
+
+footer ul li {
+    display: inline-block;
+    padding-right: 15px;
+}
+/********TTTTTTTTTTTTTTTTTTABLETTTTTTTTTTTT*********/
+
+@media (min-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+    .build-estate {
+        position: absolute;
+        top: 6%;
+        left: 3%;
+        margin: 0;
+        color: white;
+        font-size: 180%;
+        display: inline-block;
+    }
+
+    span {
+    border: 4px solid white;
+    border-right: none;
+    }
+    
+    nav {
+        position: absolute;
+        top: -10px;
+        right: 2px;
+        width: 50%;
+    }
+
+    .navigacija {
+    background-color: rgba(117, 185, 248, 0);
+    }
+
+    .navigacija li {
+        display: inline-block;
+        font-size: 90%;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    .naslov {
+        padding-top: 170px;
+        padding-bottom: 150px;
+    }
+
+    h1 {
+        margin-bottom: 2%;
+    }
+
+    .who-we-are {
+        width: 50%;
+        float: left;
+    }
+
+    .building-image {
+        width: 49%;
+        float: right;
+        margin-bottom: 25px;
+    }
+
+    #w {
+        clear: both;
+    }
+
+    .strelice:nth-of-type(2) {
+        padding: 1%;
+    }
+
+    .customers {
+        width: 48%;
+        float: left;
+        margin: 1%;
+    }
+
+    .articalAdress {
+        clear: left;
+        padding-top: 17px;
+    }
+
+    address div {
+        width: 50%;
+        float: left;
+    }
+}

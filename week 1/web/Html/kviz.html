@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://www.google.com/" method="POST">
+        <p>1. Ko je osvojio veliku nagradu Kine u F1 2018?</p>
+        <input type="radio" name="driver" value="K.Raikonnen" /> K.Raikonnen
+        <br>
+        <input type="radio" name="driver" value="D.Ricciardo" /> D.Ricciardo
+        <br>
+        <input type="radio" name="driver" value="V.Bottas" /> V.Bottas
+        <br>
+        <p>2. Ko su sve vozaci F1 u 2018?</p>
+        <input type="Checkbox" name="vozaci[]" value="S. Vettel" />S. Vettel
+        <br>
+        <input type="Checkbox" name="vozaci[]" value="A. Greizman" />A. Greizman
+        <br>
+        <input type="Checkbox" name="vozaci[]" value="C. Ronaldo" />C. Ronaldo
+        <br>
+        <input type="Checkbox" name="vozaci[]" value="L. Hamilton" />L. Hamilton
+        <br>
+        <p>3. Koji je Vas omiljeni vozac i zasto?</p>
+        <textarea name="Vase misljenje" cols="30" rows="10" placeholder="Unesite komentar ovde..."></textarea>
+        <hr /> Date
+        <select name="Date">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        Month
+        <select name="Month">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <l>Year</l>
+        <select name="Year">
+            <option value="1">1990</option>
+            <option value="2">1991</option>
+            <option value="3">1992</option>
+            <option value="4">1993</option>
+            <option value="5">1994</option>
+        </select>
+        <br />
+        <p>Vas omiljeni sport:</p>
+        <select name="sports[]" size="3" multiple="multiple">
+            <option value="F1">F1</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Football">Football</option>
+            <option value="Golf">Golf</option>
+            <option value="Tennis">Tennis</option>
+        </select>
+
+    </form>
+
+
+</body>
+
+</html>

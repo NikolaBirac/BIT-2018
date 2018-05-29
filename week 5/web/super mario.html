@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-color: blue;
+            background-image: url(bg.jpg);
+            background-repeat: repeat-x;
+            background-position: bottom;
+            margin: 0;
+        }
+
+        img {
+            position: absolute;
+            bottom: 9%;
+            right: 50%;
+            height: 200px;
+        }
+
+        .drugi {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="mario.png" alt="mario">
+    <img src="mario_running.gif" alt="mario2" class="drugi">
+
+    <script>
+
+        var body = document.querySelector('body');
+        var img1 = document.querySelector('img:first-of-type');
+        var img2 = document.querySelector('img:last-of-type');
+        var stanje = 0; //stoji
+        var step = 0;
+        var f;
+
+        function munja() {
+            if (event.keyCode === 39 && stanje === 0) {
+
+                img1.classList.toggle('drugi');
+                img2.classList.toggle('drugi');
+                f = setInterval(backgroundmoveing, 50);
+                stanje = 1;
+            }
+        }
+
+        function stoji() {
+            if (event.keyCode === 39 && stanje === 1) {
+
+                img1.classList.toggle('drugi');
+                img2.classList.toggle('drugi');
+                clearInterval(f);
+                stanje = 0;
+            }
+        }
+
+        function backgroundmoveing() {
+            step -= 10;
+            body.style.backgroundPositionX = step + 'px';
+        }
+
+        body.addEventListener('keydown', munja);
+        body.addEventListener('keyup', stoji);
+
+    </script>
+</body>
+
+</html>

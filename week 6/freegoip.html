@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text">
+    <button>Submit</button>
+    <p></p>
+
+    <script>
+
+        var button = document.querySelector('button');
+        button.addEventListener('click', function () {
+            var hostname = 'http://api.ipstack.com/' + document.querySelector('input').value + '?format=1&access_key=66f0403b5870e87ee670adb5fa81c3a6';
+            var request = new XMLHttpRequest();
+            request.open('GET', hostname, true);
+            request.onload = function () {
+                if (request.status >= 200 && request.status < 400) {
+                    var data = JSON.parse(request.responseText);
+                }
+                console.log(data);
+                document.querySelector('p').innerHTML = data.country_name;
+            }
+
+            request.send();
+        })
+
+    </script>
+</body>
+
+</html>
