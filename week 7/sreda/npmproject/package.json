@@ -1,0 +1,18 @@
+{
+  "name": "npmproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Deki i Biki",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.2.0"
+  },
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
