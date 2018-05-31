@@ -34,7 +34,7 @@ export class UIModule {
             const div = $('<div>').attr('class', 'col-4');
             const a = $('<a>').attr('href', './showInfo.html?id=' + imgID);
             a.attr('target', '_blank');
-            const img = $('<img>').attr('src', data[i].image.original);
+            const img = $('<img>').attr('src', data[i].image);
             img.attr('id', imgID);
             const p = $('<p>' + data[i].name + '</p>');
             p.attr('id', imgID);
