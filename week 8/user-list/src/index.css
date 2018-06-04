@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.footer {
+  font-size: 200%;
+}
+.footer p {
+  line-height: 110px;
+  margin: 0;
+}
+.container {
+  text-align: initial;
+}
+.item {
+  display: inline-block;
+}
+.listItem {
+  padding: 15px;
+  border: grey 1px solid;
+  border-bottom: white;
+}
+img {  
+  border-radius: 50%;
+  padding: 10px;
+}
+.card {
+  display: inline-block;
+  border: none;
+  margin-top: 20px;
+}
+.images {
+  border-radius: initial;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.imgName {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  color: white;
+  font-size: 150%;
+}
+button {
+  display: block;
+  margin:20px auto;
+}
