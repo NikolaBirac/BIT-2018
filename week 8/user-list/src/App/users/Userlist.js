@@ -2,31 +2,30 @@ import React from "react";
 import UserListItem from "./UserListItem.js";
 import CardItemList from './UserCardItem';
 import PropTypes from 'prop-types';
+// import dataServices from '../services/dataServices';
+
 
 class Userlist extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            selected: false
-        };
     }
 
-    onClick = () => {
-        this.setState((prevState, props) => {
-            return {
-                selected: !prevState.selected
-            }
-        })
-
-    }
+    // onClick = () => {
+    //     this.setState((prevState, props) => {
+    //         return {
+    //             selected: !prevState.selected
+    //         }
+    //     })
+    // }
+    
 
     render() {
         return (
             < div className="container" >
-                <button onClick={this.onClick.bind(this)}>Click</button>
+                {/* <button onClick={this.onClick}>Switch</button> */}
                 {this.props.users.map((ingredient, i) => (
-                    (this.state.selected) ? <UserListItem ingredient={ingredient} key={i} /> : <CardItemList ingredient={ingredient} key={i} />
+                    (this.props.selected) ? <UserListItem ingredient={ingredient} key={i} /> : <CardItemList ingredient={ingredient} key={i} />
                 ))}
             </div >
         )

@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
 }
 .footer {
+  margin-top: 50px;
   font-size: 200%;
 }
 .footer p {
@@ -18,9 +19,14 @@ body {
 }
 .listItem {
   padding: 15px;
-  border: grey 1px solid;
+  border: rgb(185, 185, 185) 1px solid;
   border-bottom: white;
 }
+
+.listItem:last-of-type {
+  border-bottom: rgb(185, 185, 185) 1px solid;
+}
+
 img {  
   border-radius: 50%;
   padding: 10px;
@@ -44,6 +50,44 @@ img {
   font-size: 150%;
 }
 button {
-  display: block;
-  margin:20px auto;
+  position: relative;
+  display: inline-block;
+  /* top:20px; */
+  left: 95%;
+  /* margin:20px auto; */
+  
+}
+.female {
+  background-color: rgb(255, 215, 221);
+}
+
+.icon {
+  width: 25px;
+  padding: 0;
+  border-radius: 0;
+}
+
+input {
+  margin: 0;
+  border: 1px solid white;
+  border-bottom: 1px solid rgb(133, 133, 133);
+  height: 40px;
+  width: 96%;
+  margin-bottom: 50px;
+  outline: none;
+  font-size: 20px;
+}
+
+input:focus {
+  border-bottom:none;
+
+}
+
+#input {
+  padding: 0;
+}
+
+.glyphicon-search {
+  font-size: 200%;
+  margin-right: 15px;
 }
