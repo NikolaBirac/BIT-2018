@@ -1,7 +1,7 @@
 import React from 'react';
 
 class SearchBox extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -9,16 +9,16 @@ class SearchBox extends React.Component {
         }
     }
 
-    handleInput =(event) => {
+    handleInput = (event) => {
         this.setState({
             inputText: event.target.value
         })
     }
 
-    render(){
+    render() {
         return (
             <div className="container" id='input'>
-                <i class="glyphicon glyphicon-search"></i><input type='text' value={this.state.inputText} onChange={this.handleInput} placeholder="Search"/>
+                <i className="glyphicon glyphicon-search"></i><input type='text' value={this.state.inputText} onChange={this.handleInput} placeholder="Search" />
             </div>
         )
     }

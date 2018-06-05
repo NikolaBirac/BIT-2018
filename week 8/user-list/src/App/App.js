@@ -5,10 +5,11 @@ import Footer from './partials/Footer';
 import Userlist from './users/Userlist';
 import dataServices from "./services/dataServices";
 import SearchBox from './partials/SearchBox';
+// import Counter from "./users/usersCounter";
 
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -16,34 +17,36 @@ class App extends Component {
       users: []
     }
   }
-  handleClick = ()=>{
+  handleClick = () => {
     this.setState((prevState, props) => {
       return {
-          display: !prevState.display
+        display: !prevState.display
       }
     })
   }
-  loadUsers(){
-    return dataServices.getUser().then(data=>{
+  loadUsers() {
+    return dataServices.getUser().then(data => {
       this.setState({
-          users: data
+        users: data
       })
     })
   }
-  componentDidMount(){
+  componentDidMount() {//cemu sluzi ova
     this.loadUsers()
   }
-  refreshPage = () => {
+  refreshPage = () => { //zasto smo pravili ovu funckiju vise???
     this.loadUsers()
   }
+
+  
 
   render() {
     return (
       <div className="App">
-        <Header handler={this.handleClick} display={this.state.display} refresh={this.refreshPage}/>
+        <Header handler={this.handleClick} display={this.state.display} refresh={this.refreshPage} />
         <SearchBox />
-        {/* <Counter /> */}
-        <Userlist selected={this.state.display} users={this.state.users}/>
+        {/* <Counter users={this.state.users} /> */}
+        <Userlist selected={this.state.display} users={this.state.users} />
         <Footer />
       </div>
     );

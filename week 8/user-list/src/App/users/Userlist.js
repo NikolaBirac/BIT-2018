@@ -4,11 +4,9 @@ import CardItemList from './UserCardItem';
 import PropTypes from 'prop-types';
 // import dataServices from '../services/dataServices';
 
-
 class Userlist extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     // onClick = () => {
@@ -18,7 +16,6 @@ class Userlist extends React.Component {
     //         }
     //     })
     // }
-    
 
     render() {
         return (
@@ -45,7 +42,6 @@ Userlist.propTypes = {
 }
 
 export default Userlist;
-
 
 // const Userlist = (props) => (
 //     <div className="container">
