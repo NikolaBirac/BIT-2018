@@ -5,8 +5,7 @@ import Footer from './partials/Footer';
 import Userlist from './users/Userlist';
 import dataServices from "./services/dataServices";
 import SearchBox from './partials/SearchBox';
-import Counter from "./users/UsersCounter";
-
+import Animation from './partials/Animation';
 
 class App extends Component {
   constructor(props) {
@@ -15,9 +14,11 @@ class App extends Component {
     this.state = {
       isCardView: false,
       users: [],
-      date: new Date()
+      date: new Date(),
+      loading: true
     }
   }
+
   handleClick = () => {
     localStorage.setItem("value", !this.state.isCardView)
     this.setState((prevState, props) => {
@@ -30,11 +31,13 @@ class App extends Component {
   loadUsers() {
     return dataServices.getUser().then(data => {
       this.setState({
-        users: data
+        users: data,
+        loading: false
       })
     })
   }
   componentDidMount() {
+
     this.loadUsers();
     this.refreshLocalStorage();
   }
@@ -50,11 +53,12 @@ class App extends Component {
   refreshLocalStorage() {
     const isCardViewFromStorage = localStorage.getItem('value');
 
-    if (isCardViewFromStorage != undefined) {
-      const isCardView = JSON.parse(isCardViewFromStorage);
+    if (isCardViewFromStorage !== undefined) {
+      const isCardView = JSON.parse(isCardViewFromStorage);    //parsiramo da bi "true" preveli u boolean
       this.state.isCardView = isCardView;
     }
   }
+
   search = (searchText) => {
     this.setState({
       searchText: searchText
@@ -66,9 +70,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header handler={this.handleClick} isCardView={this.state.isCardView} refresh={this.refreshPage} />
-        <SearchBox search={this.search} />
-        <Userlist isCardView={this.state.isCardView} users={this.state.users} searchText={this.state.searchText} />
-        <Footer currentDate={this.state.date}/>
+        {(this.state.loading) ? '' : <SearchBox search={this.search} />}
+        {(this.state.loading) ? <Animation /> : <Userlist isCardView={this.state.isCardView} users={this.state.users} searchText={this.state.searchText} />}
+
+        <Footer currentDate={this.state.date} />
       </div>
     );
   }

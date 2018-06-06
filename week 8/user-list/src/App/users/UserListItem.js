@@ -29,8 +29,8 @@ UserListItem.propTypes = {
         name: PropTypes.string.isRequired,
         email: PropTypes.string.isRequired,
         dob: PropTypes.string.isRequired,
-        mediumPicture: PropTypes.string.isRequired,
-        largePicture: PropTypes.string.isRequired
+        // mediumPicture: PropTypes.string.isRequired,
+        // largePicture: PropTypes.string.isRequired
     })
 }
 
