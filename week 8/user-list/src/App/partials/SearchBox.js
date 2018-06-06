@@ -13,6 +13,7 @@ class SearchBox extends React.Component {
         this.setState({
             inputText: event.target.value
         })
+        this.props.search(event.target.value);
     }
 
     render() {

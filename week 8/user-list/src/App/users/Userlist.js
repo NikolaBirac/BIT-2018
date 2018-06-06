@@ -2,6 +2,8 @@ import React from "react";
 import UserListItem from "./UserListItem.js";
 import CardItemList from './UserCardItem';
 import PropTypes from 'prop-types';
+import Counter from './UsersCounter';
+import UserNotFound from './UserNotFound'
 // import dataServices from '../services/dataServices';
 
 class Userlist extends React.Component {
@@ -17,17 +19,24 @@ class Userlist extends React.Component {
     //     })
     // }
 
+    filterUserList = (element) => {             //callback filter funkcije
+        if (!this.props.searchText) {
+            return true;                    //callback filter funkcije kad vrati true, niz ostaje takav kakav jeste
+        }
+        return (element.name.first.toLowerCase() + element.name.last.toLowerCase()).includes(this.props.searchText.toLowerCase())
+    }
     render() {
         return (
             < div className="container" >
-                {/* <button onClick={this.onClick}>Switch</button> */}
-                {this.props.users.map((ingredient, i) => (
-                    (this.props.selected) ? <UserListItem ingredient={ingredient} key={i} /> : <CardItemList ingredient={ingredient} key={i} />
+                {(this.props.users.filter(this.filterUserList).length === 0) ? <UserNotFound /> : <Counter users={this.props.users.filter(this.filterUserList)} />}
+                {this.props.users.filter(this.filterUserList).map((ingredient, i) => (
+                    (!this.props.isCardView) ? <UserListItem ingredient={ingredient} key={i} /> : <CardItemList ingredient={ingredient} key={i} />
                 ))}
             </div >
         )
     }
 }
+
 Userlist.propTypes = {
     users: PropTypes.array.isRequired
 }

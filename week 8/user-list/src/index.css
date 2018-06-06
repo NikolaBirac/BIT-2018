@@ -88,3 +88,28 @@ input:focus {
   font-size: 200%;
   margin-right: 15px;
 }
+
+#counter {
+  text-align: right;
+}
+
+.container {
+  padding: 0;
+}
+
+#userNotFound {
+  font-size: 270%;
+  text-align: center;
+  color: rgb(122, 122, 122);
+  margin: 102px auto; 
+}
+
+.glyphicon-remove-circle {
+  font-size: 220%;
+  
+}
+#lastUpdate {
+  position: absolute;
+  right: 50px;
+  top: 24px;
+}

@@ -2,28 +2,27 @@ import React from 'react';
 
 class Counter extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
-    // counterGender() {
-        const counter=12;
-        // this.props.users.map(user => {
-        //   if (user.gender === 'female') {
-            // return counter++;
-    //       }
-    //     })
-    //   }
-
     render() {
+        let counterFemale = 0;
+        let counterMale = 0;
+        for (let i in this.props.users) {
+            if (this.props.users[i].gender === 'female') {
+                counterFemale++;
+            } else {
+                counterMale++;
+            }
+        }
         return (
-            <div>
+            <div className='container' id="counter">
                 <p>
-                  {this.counterGender.counter}
+                    Female: {counterFemale}  Male: {counterMale}
                 </p>
             </div>
         )
     }
-
 }
 
 export default Counter;

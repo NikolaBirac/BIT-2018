@@ -8,7 +8,7 @@ const Header = (props) => {
             <img src={logo} className="App-logo" alt="logo" />
             <div className="container">
                 <button onClick={props.handler}>
-                    {(props.display) ? <img className="icon" src="https://image.flaticon.com/icons/svg/56/56844.svg" /> : <img className="icon" src="https://cdn2.iconfinder.com/data/icons/game-center-mixed-icons/512/list2.png" />}
+                    {(props.isCardView) ? <img className="icon" src="https://cdn2.iconfinder.com/data/icons/game-center-mixed-icons/512/list2.png" /> : <img className="icon" src="https://image.flaticon.com/icons/svg/56/56844.svg" />}
                 </button>
                 <button onClick={props.refresh}><img className="icon" src="https://cdn0.iconfinder.com/data/icons/essentials-solid/100/Refresh-512.png" /></button>
                 <h1 className="App-title col-4 offset-5">BIT Users</h1>
