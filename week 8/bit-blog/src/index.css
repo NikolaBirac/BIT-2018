@@ -3,3 +3,82 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+/*   HEADER   */
+
+header {
+  padding: 40px 0;
+  background-color: rgb(209, 209, 209);
+  margin-bottom: 50px;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+nav {
+  padding-top: 10px;
+}
+
+nav div {
+  height: 27px;
+  padding-bottom: 5px;
+}
+
+
+nav div:nth-of-type(2) {
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.nav-link {
+  padding-bottom: 4px;
+  padding-top: 2px;
+}
+
+a:focus {
+  color: black;
+}
+/*   FOOTER   */
+footer {
+  margin-top: 70px;
+  padding: 25px;
+  background-color: rgb(209, 209, 209);
+}
+
+footer p {
+  margin: 0;
+}
+
+/*   HOME-PAGE   */
+
+.listItem {
+  text-align: left;
+  border-bottom: 1px solid black;
+  margin-bottom: 35px;
+}
+h2 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+/*   AUTHORS-PAGE   */
+
+.authors p {
+  font-size: 200%;
+}
+
+/*   DETAILS-PAGE   */
+
+.details p, h4 {
+  text-align: left;
+}
+
+.details h4 {
+  border-top: 1px solid black;
+  padding-top: 35px;
+}
+
+.detailsP{
+  margin: 40px 0; 
+}
