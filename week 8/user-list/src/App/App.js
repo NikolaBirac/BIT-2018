@@ -44,10 +44,12 @@ class App extends Component {
   refreshPage = () => {
     this.setState(() => {
       return {
-        date: new Date()
+        date: new Date(),
       }
     })
     localStorage.setItem('currentDate', this.state.date);
+
+
     this.loadUsers()
   }
   refreshLocalStorage() {

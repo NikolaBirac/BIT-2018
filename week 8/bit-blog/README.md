@@ -1,0 +1,47 @@
+```
+my-app/
+  README.md
+  node_modules/
+  package.json
+  public/
+    index.html
+    favicon.ico
+  src/
+    app/
+      home/
+        HomePage.js
+          PostList.js
+            PostItem.js
+      authors/
+        AuthorPage.js
+          AuthorsList.js
+      about/
+        About.js
+      singlePost/
+        SinglePost.js
+          AuthorName.js
+          MorePosts.js
+      singleAuthor/
+        SingleAuthor.js
+          AuthorInformation.js
+          AuthorAddress.js
+          AuthorCompany.js
+      App.css
+      App.js
+      App.test.js
+    entities/
+      Post.js
+    services/
+      dataServices.jss
+    partials/
+      header/
+        navigation.js
+      footer/
+    shared/
+      constants.js
+      utils.js
+    index.css
+    index.js
+    logo.svg
+    
+```
