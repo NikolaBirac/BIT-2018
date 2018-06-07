@@ -6,7 +6,8 @@ import Home from "./home/HomePage";
 import Authors from "./authors/AuthorsPage";
 import About from "./about/AboutPage";
 import Details from "./singlePost/SinglePostPage";
-import { Switch, Route, Redirect} from 'react-router-dom'
+import AuthorProfile from "./singleAuthor/AuthorProfilePage";
+import { Switch, Route, Redirect} from 'react-router-dom';
 
 
 class App extends Component {
@@ -16,9 +17,10 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/home" component={Home}/>
-          <Route path="/authors" component={Authors}/> 
+          <Route exact path="/authors" component={Authors}/> 
           <Route path="/about" component={About}/> 
-          <Route path="/details" component={Details}/>
+          <Route path="/details" component={Details}/>    
+          <Route path="/authors/1" component={AuthorProfile}/>    
           <Redirect from="/" to="/home"/>         
         </Switch>
         <Footer />

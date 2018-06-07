@@ -82,3 +82,28 @@ h2 {
 .detailsP{
   margin: 40px 0; 
 }
+
+/*   PROFILE-PAGE   */
+
+.profile img{
+  width: 100%;
+}
+
+.profile h2{
+  margin-top: 0;
+}
+
+.profile > div {
+  margin-bottom: 50px;
+}
+.address {
+  text-align: left
+}
+.col-12{
+  padding: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}

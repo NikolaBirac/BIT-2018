@@ -1,13 +1,12 @@
 import React from 'react';
 import PostItem from './PostItem';
 
-const PostList = () => {
+const PostList = (props) => {
         return(
             <div>
-                <PostItem />
-                <PostItem />
-                <PostItem />
-                <PostItem />                
+                {props.posts.map(element => {
+                    return <PostItem post={element} />
+                })}              
             </div>
         )
 }

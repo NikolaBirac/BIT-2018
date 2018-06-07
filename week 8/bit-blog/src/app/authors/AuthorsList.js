@@ -1,15 +1,12 @@
 import React from 'react';
 import AuthorListItem from './AuthorListItem';
 
-const AuthorsList = () => {
+const AuthorsList = (props) => {
         return(
             <div>
-                <AuthorListItem />
-                <AuthorListItem />
-                <AuthorListItem />
-                <AuthorListItem />
-                <AuthorListItem />
-                <AuthorListItem />
+                {props.authors.map(author=>{
+                    return <AuthorListItem name={author.name}/>
+                })}
             </div>
         )
 }
