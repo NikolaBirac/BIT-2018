@@ -1,0 +1,1 @@
+import { serviceURL } from '../shared/contants';
