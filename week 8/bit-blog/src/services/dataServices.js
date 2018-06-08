@@ -2,6 +2,7 @@ import { serviceURL } from '../shared/constants';
 import Post from '../entities/Post';
 import Author from '../entities/Author'
 import axios from 'axios';
+import { ENGINE_METHOD_CIPHERS } from 'constants';
 
 class DataServices {
 
@@ -38,7 +39,7 @@ class DataServices {
     getAuthorPosts(userId, postId) {
         return axios.get(`${serviceURL}posts?userId=${userId}`)
             .then(response => {
-                const result = response.data.filter(post => post.id != postId);
+                const result = response.data.filter(post => post.id !== postId);
                 return result.slice(0, 3)
             })
     }
@@ -54,3 +55,4 @@ class DataServices {
 }
 
 export default new DataServices();
+

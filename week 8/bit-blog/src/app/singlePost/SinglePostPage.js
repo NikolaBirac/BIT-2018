@@ -14,6 +14,7 @@ class SinglePostPage extends React.Component {
             userPosts: null
         }
     }
+
     componentWillReceiveProps(nextProps) {
         this.loadPage(nextProps.match.params.id);
 
