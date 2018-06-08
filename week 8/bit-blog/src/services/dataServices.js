@@ -45,11 +45,12 @@ class DataServices {
     }
 
     sendNewPost(newPost) {
-        axios({
+        return axios({
             method: 'post',
             url: `${serviceURL}posts`,
             data: newPost
         })
+            .then(response => response.status)
     }
 
 }

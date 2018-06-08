@@ -38,10 +38,14 @@ class NewPost extends React.Component {
             title: this.state.title,
             content: this.state.content
         }
-        data.sendNewPost(newPost);
-        this.setState({
-            status: true
-        })
+        data.sendNewPost(newPost)
+            .then(response => {
+                if (response >= 200 && response < 300) {
+                    this.setState({
+                        status: true
+                    })
+                }
+            })
     }
     checkStatus() {
         if (this.state.status) {
