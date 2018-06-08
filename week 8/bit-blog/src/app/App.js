@@ -7,7 +7,7 @@ import Authors from "./authors/AuthorsPage";
 import About from "./about/AboutPage";
 import Details from "./singlePost/SinglePostPage";
 import AuthorProfile from "./singleAuthor/AuthorProfilePage";
-import { Switch, Route, Redirect} from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 
 class App extends Component {
@@ -16,12 +16,12 @@ class App extends Component {
       <div className="App container">
         <Header />
         <Switch>
-          <Route exact path="/home" component={Home}/>
-          <Route exact path="/authors" component={Authors}/> 
-          <Route path="/about" component={About}/> 
-          <Route path="/details" component={Details}/>    
-          <Route path="/authors/1" component={AuthorProfile}/>    
-          <Redirect from="/" to="/home"/>         
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/authors" component={Authors} />
+          <Route path="/about" component={About} />
+          <Route path="/details/:id" component={Details} />
+          <Route path="/authors/:id" component={AuthorProfile} />
+          <Redirect from="/" to="/home" />
         </Switch>
         <Footer />
       </div>

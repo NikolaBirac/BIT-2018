@@ -4,24 +4,42 @@ import Author from '../entities/Author'
 import axios from 'axios';
 
 class DataServices {
-    
+
     getPosts() {
         return axios.get(`${serviceURL}posts`)
             .then(response => {
-                const result = response.data.slice(0,20);
-                return result.map(post=>{
-                    return new Post(post.id,post.title,post.body);
+                const result = response.data.slice(0, 20);
+                return result.map(post => {
+                    return new Post(post.id, post.title, post.body);
                 })
             })
     }
 
-    getAuthors(){
+    getAuthors() {
         return axios.get(`${serviceURL}users`)
             .then(response => {
                 const result = response.data;
-                return result.map(author =>{
-                    return new Author(author.name,author.username,author.email,author.address,author.phone,author.company);
+                return result.map(author => {
+                    return new Author(author.id, author.name, author.username, author.email, author.address, author.phone, author.company);
                 })
+            })
+    }
+
+    getAuthor(id) {
+        return axios.get(`${serviceURL}users/${id}`)
+            .then(response => response.data);
+    }
+
+    getPost(id) {
+        return axios.get(`${serviceURL}posts/${id}`)
+            .then(response => response.data)
+    }
+
+    getAuthorPosts(userId, postId) {
+        return axios.get(`${serviceURL}posts?userId=${userId}`)
+            .then(response => {
+                const result = response.data.filter(post => post.id != postId);
+                return result.slice(0, 3)
             })
     }
 

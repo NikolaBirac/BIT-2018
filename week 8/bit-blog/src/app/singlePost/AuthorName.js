@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AuthorName = ()=>{
+const AuthorName = (props) => {
     return (
-        <h3><Link to="/author/1">Ime Autora</Link></h3>
+        <h3><Link to={'/authors/' + props.user.id}>{props.user.name}</Link></h3>
     )
 }
 

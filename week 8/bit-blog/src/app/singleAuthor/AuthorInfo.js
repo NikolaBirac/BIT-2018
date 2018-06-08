@@ -1,24 +1,24 @@
 import React from 'react';
 
-const AuthorInfo =(props)=>{
+const AuthorInfo = (props) => {
 
-    return(
+    return (
         <div className='row'>
             <div className='col-4'>
-                <img id="icardi"src='https://www.thesportsman.com/media/images/admin/football/mauro_icardi.jpg' alt='image'/>
+                <img id="icardi" src='https://www.thesportsman.com/media/images/admin/football/mauro_icardi.jpg' alt='image' />
             </div>
             <div className='col-8'>
                 <div className='row'>
-                    <h2>Marko markovic</h2>
+                    <h2>{props.author.name}</h2>
                 </div>
                 <div className='row'>
-                    <p>username:</p>
+                    <p>username: {props.author.username}</p>
                 </div>
                 <div className='row'>
-                    <p>email:</p>                    
+                    <p>email: {props.author.email}</p>
                 </div>
                 <div className='row'>
-                    <p>company:</p>
+                    <p>phone: {props.author.phone}</p>
                 </div>
             </div>
         </div>

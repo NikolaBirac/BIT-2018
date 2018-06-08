@@ -1,5 +1,6 @@
 class Author {
-    constructor(name,username,email,address,phone,company){
+    constructor(id, name, username, email, address, phone, company) {
+        this.id = id;
         this.name = name;
         this.username = username;
         this.email = email;

@@ -3,7 +3,7 @@ import AuthorsList from "./AuthorsList";
 import data from '../../services/dataServices';
 
 class Authors extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -11,23 +11,23 @@ class Authors extends React.Component {
         }
     }
 
-    loadAuthors (){
-        return data.getAuthors().then(authors=>{
+    loadAuthors() {
+        return data.getAuthors().then(authors => {
             this.setState({
                 authors
             })
         })
     }
 
-    componentDidMount(){
-        this.loadAuthors()
+    componentDidMount() {
+        this.loadAuthors();
     }
 
-    render (){
-        return(
+    render() {
+        return (
             <div>
                 <h2> AUTHORS ({this.state.authors.length})</h2>
-                <AuthorsList authors={this.state.authors}/>
+                <AuthorsList authors={this.state.authors} />
             </div>
         )
     }

@@ -3,7 +3,7 @@ import PostList from './PostList';
 import data from '../../services/dataServices';
 
 class Home extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.loadPost = this.loadPosts.bind(this);
@@ -13,21 +13,23 @@ class Home extends React.Component {
         }
     }
 
-    loadPosts(){
+    loadPosts() {
         return data.getPosts().then(data => {
             this.setState({
                 posts: data
             })
         })
     }
-    componentDidMount(){
+
+    componentDidMount() {
         this.loadPosts();
     }
-    render (){
-        return(
+
+    render() {
+        return (
             <div>
                 <h2> POSTS</h2>
-                <PostList posts={this.state.posts}/>
+                <PostList posts={this.state.posts} />
             </div>
         )
     }
