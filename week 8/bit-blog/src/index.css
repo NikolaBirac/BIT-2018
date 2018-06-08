@@ -52,6 +52,12 @@ footer p {
 
 /*   HOME-PAGE   */
 
+.newPost {
+  position: absolute;
+  top: 160px;
+  right: 430px;
+}
+
 .listItem {
   text-align: left;
   border-bottom: 1px solid black;
@@ -108,4 +114,27 @@ h2 {
 iframe {
   width: 100%;
   height: 100%;
+}
+
+/*   NEW POST   */
+
+.newPostForm > div {
+  text-align: left;
+}
+
+.newPostForm input, textarea {
+  width: 100%;
+  margin: 20px;
+}
+
+.newPostForm h3 {
+  margin: 20px;
+}
+
+#button1, #button2 {
+  margin: 0;
+  margin-top: 20px;
+}
+textarea {
+  height: 130px;
 }

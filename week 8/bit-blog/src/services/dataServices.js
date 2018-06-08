@@ -43,6 +43,14 @@ class DataServices {
             })
     }
 
+    sendNewPost(newPost) {
+        axios({
+            method: 'post',
+            url: `${serviceURL}posts`,
+            data: newPost
+        })
+    }
+
 }
 
 export default new DataServices();

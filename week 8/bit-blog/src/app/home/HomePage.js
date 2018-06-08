@@ -1,6 +1,7 @@
 import React from 'react';
 import PostList from './PostList';
 import data from '../../services/dataServices';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class Home extends React.Component {
         return (
             <div>
                 <h2> POSTS</h2>
+                <Link to='/posts/new' className='newPost'>New Post</Link>
                 <PostList posts={this.state.posts} />
             </div>
         )
