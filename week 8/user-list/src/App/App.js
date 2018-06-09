@@ -29,18 +29,50 @@ class App extends Component {
   }
 
   loadUsers() {
-    return dataServices.getUser().then(data => {
+    let users = localStorage.getItem('users')
+
+    if (users) {
+      this.setState({
+        users: JSON.parse(users),
+        loading: false
+      })
+    } else {
+      dataServices.getUser().then(data => {
+        localStorage.setItem('users', JSON.stringify(data));
+        this.setState({
+          users: data,
+          loading: false
+        })
+      })
+    }
+  }
+
+  loadUsersRefresh() {
+    dataServices.getUser().then(data => {
+      localStorage.setItem('users', JSON.stringify(data));
       this.setState({
         users: data,
         loading: false
       })
     })
   }
+
   componentDidMount() {
+    let time = localStorage.getItem('currentDate')
+    if (time) {
+      this.setState({
+        date: new Date(time)
+      })
+    } else {
+      this.setState({
+        date: new Date()
+      })
+    }
 
     this.loadUsers();
     this.refreshLocalStorage();
   }
+
   refreshPage = () => {
     this.setState(() => {
       return {
@@ -49,9 +81,9 @@ class App extends Component {
     })
     localStorage.setItem('currentDate', this.state.date);
 
-
-    this.loadUsers()
+    this.loadUsersRefresh()
   }
+
   refreshLocalStorage() {
     const isCardViewFromStorage = localStorage.getItem('value');
 

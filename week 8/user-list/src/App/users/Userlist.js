@@ -4,20 +4,11 @@ import CardItemList from './UserCardItem';
 import PropTypes from 'prop-types';
 import Counter from './UsersCounter';
 import UserNotFound from './UserNotFound'
-// import dataServices from '../services/dataServices';
 
 class Userlist extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    // onClick = () => {
-    //     this.setState((prevState, props) => {
-    //         return {
-    //             selected: !prevState.selected
-    //         }
-    //     })
-    // }
 
     filterUserList = (element) => {             //callback filter funkcije
         if (!this.props.searchText) {
@@ -52,11 +43,3 @@ Userlist.propTypes = {
 
 export default Userlist;
 
-// const Userlist = (props) => (
-//     <div className="container">
-//         {props.users.map((ingredient, i) => (
-//             // <UserListItem ingredient={ingredient} key={i} />
-//             <CardItemList ingredient={ingredient} key={i} />
-//         ))}
-//     </div>
-// );

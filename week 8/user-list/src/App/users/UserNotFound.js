@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserNotFound =()=> (
+const UserNotFound = () => (
     <div id="userNotFound" className="col-4 offset-4">
         <i className="glyphicon glyphicon-remove-circle"></i>
         <p>
