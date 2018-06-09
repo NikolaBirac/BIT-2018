@@ -2,6 +2,7 @@ import React from 'react';
 import AuthorInfo from './AuthorInfo';
 import AuthorAddress from './AuthorAddress';
 import AuthorCompany from './AuthorCompany';
+import Loading from '../../partials/Loading';
 import data from '../../services/dataServices';
 
 
@@ -29,7 +30,7 @@ class AuthorProfilePage extends React.Component {
                     <AuthorInfo author={this.state.author} />
                     <AuthorAddress author={this.state.author} />
                     <AuthorCompany author={this.state.author} />
-                </div> : <div>Loading</div>
+                </div> : <div><Loading /></div>
         )
     }
 }

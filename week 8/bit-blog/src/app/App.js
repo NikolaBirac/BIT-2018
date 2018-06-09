@@ -14,18 +14,19 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div className="App container">
-        <Header />
-        <Switch>
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/authors" component={Authors} />
-          <Route path="/about" component={About} />
-          <Route path="/details/:id" component={Details} />
-          <Route path="/authors/:id" component={AuthorProfile} />
-          <Route exact path="/posts/new" component={NewPost} />
-          <Redirect from="/" to="/home" />
-        </Switch>
-        <Footer />
+      <div className="App container bg-white">
+        <Header />        
+
+            <Switch>
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/authors" component={Authors} />
+              <Route path="/about" component={About} />
+              <Route path="/details/:id" component={Details} />
+              <Route path="/authors/:id" component={AuthorProfile} />
+              <Route exact path="/posts/new" component={NewPost} />
+              <Redirect from="/" to="/home" />
+            </Switch>
+          <Footer />
       </div>
     );
   }

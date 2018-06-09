@@ -1,6 +1,7 @@
 import React from 'react';
 import AuthorName from './AuthorName';
 import MorePosts from './MorePosts';
+import Loading from '../../partials/Loading';
 import data from '../../services/dataServices';
 
 
@@ -46,11 +47,15 @@ class SinglePostPage extends React.Component {
         return (
             (this.state.post) ?
                 <div className="details">
+                    <a href="#" className="hvr-icon-back">
+                        <i className="fa fa-chevron-circle-left hvr-icon"></i>
+                        Back
+                    </a>
                     <h2>{this.state.post.title}</h2>
-                    {(this.state.user) ? <AuthorName user={this.state.user} /> : <div>Loading</div>}
+                    {(this.state.user) ? <AuthorName user={this.state.user} /> : <Loading />}
                     <p className="detailsP">{this.state.post.body}</p>
-                    {(this.state.userPosts) ? <MorePosts userPosts={this.state.userPosts} /> : <div>Loading</div>}
-                </div> : <div>Loading</div>
+                    {(this.state.userPosts) ? <MorePosts userPosts={this.state.userPosts} /> : <div><Loading /></div>}
+                </div> : <div><Loading /></div>
         )
     }
 }
