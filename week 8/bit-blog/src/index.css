@@ -5,6 +5,10 @@ body {
   font-size: 18px;
 }
 
+.main {
+  padding: 15px 30px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -12,7 +16,7 @@ a {
 
 a:hover {
   text-decoration: none;
-
+  color:black;
 }
 
 /*   HEADER   */
@@ -72,7 +76,6 @@ a:focus {
 footer {
   margin-top: 70px;
   padding: 25px;
-  background-color: rgb(209, 209, 209);
 }
 
 footer p {
@@ -82,9 +85,7 @@ footer p {
 /*   HOME-PAGE   */
 
 .newPost {
-  position: absolute;
-  top: 160px;
-  right: 430px;
+  margin-top: 10px;
 }
 
 .listItem {
@@ -92,9 +93,20 @@ footer p {
   border-bottom: 1px solid black;
   margin-bottom: 35px;
 }
+
+.listItem:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 15px;
+}
+
 h2 {
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.h2-posts {
+  margin-top: 10px;
 }
 
 /*   AUTHORS-PAGE   */
@@ -161,14 +173,21 @@ iframe {
 }
 
 #button1, #button2 {
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0px 20px 0;
 }
 textarea {
   height: 130px;
 }
 
 /*  ICONS  */
+
+.hvr-icon-back, .hvr-icon-grow {
+  color: rgb(15, 88, 246);
+}
+
+.hvr-icon-back:hover, .hvr-icon-grow:hover {
+  color: rgb(15, 88, 246);
+}
 
 i {
   margin: 0 4px;
@@ -178,3 +197,4 @@ i {
 #root {
   background-color: rgb(250, 250, 226);
 }
+

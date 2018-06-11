@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Header />
 
-        <div className='container bg-white'>
+        <div className='container bg-white main'>
           <Switch>
             <Route exact path="/home" component={Home} />
             <Route exact path="/authors" component={Authors} />

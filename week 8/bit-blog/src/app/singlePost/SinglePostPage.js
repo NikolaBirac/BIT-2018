@@ -47,10 +47,12 @@ class SinglePostPage extends React.Component {
         return (
             (this.state.post) ?
                 <div className="details">
-                    <a href="#" className="hvr-icon-back">
-                        <i className="fa fa-chevron-circle-left hvr-icon"></i>
-                        Back
-                    </a>
+                    <div className='row'>
+                        <a href="#" className="hvr-icon-back">
+                            <i className="fa fa-chevron-circle-left hvr-icon col-2"></i>
+                            Back
+                        </a>
+                    </div>
                     <h2>{this.state.post.title}</h2>
                     {(this.state.user) ? <AuthorName user={this.state.user} /> : <Loading />}
                     <p className="detailsP">{this.state.post.body}</p>

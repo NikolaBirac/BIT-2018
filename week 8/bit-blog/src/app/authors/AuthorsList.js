@@ -2,10 +2,15 @@ import React from 'react';
 import AuthorListItem from './AuthorListItem';
 
 const AuthorsList = (props) => {
+
     return (
         <div>
             {props.authors.map(author => {
-                return <AuthorListItem name={author.name} id={author.id} />
+
+                // for (let i in props.posts) {
+                return <AuthorListItem name={author.name} id={author.id} posts={props.posts} />
+                // }
+
             })}
         </div>
     )

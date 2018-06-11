@@ -44,6 +44,11 @@ class DataServices {
             })
     }
 
+    getAllAuthorPosts(userId) {
+        return axios.get(`${serviceURL}posts?userId=${userId}`)
+            .then(response => response.data)
+    }
+
     sendNewPost(newPost) {
         return axios({
             method: 'post',
