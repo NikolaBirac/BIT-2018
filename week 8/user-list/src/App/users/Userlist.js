@@ -10,9 +10,9 @@ class Userlist extends React.Component {
         super(props);
     }
 
-    filterUserList = (element) => {             //callback filter funkcije
+    filterUserList = (element) => {            
         if (!this.props.searchText) {
-            return true;                    //callback filter funkcije kad vrati true, niz ostaje takav kakav jeste
+            return true;                  
         }
         return (element.name.first.toLowerCase() + element.name.last.toLowerCase()).includes(this.props.searchText.toLowerCase())
     }
