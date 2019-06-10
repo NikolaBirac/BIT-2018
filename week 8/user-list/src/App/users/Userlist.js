@@ -2,7 +2,7 @@ import React from "react";
 import UserListItem from "./UserListItem.js";
 import CardItemList from './UserCardItem';
 import PropTypes from 'prop-types';
-import Counter from './UsersCounter';
+import Counter from './Counter';
 import UserNotFound from './UserNotFound'
 
 class Userlist extends React.Component {

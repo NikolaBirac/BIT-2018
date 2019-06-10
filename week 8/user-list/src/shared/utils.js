@@ -1,6 +1,6 @@
 class Utils {
     dateCol(date) {
-        const splited = date.split(' ');
+        const splited = date.date.split('T');
         const nextsplit = splited[0].split('-');
         const newDate = `${nextsplit[2]}.${nextsplit[1]}.${nextsplit[0]}`;
         return newDate;
